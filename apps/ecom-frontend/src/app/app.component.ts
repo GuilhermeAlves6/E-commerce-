@@ -6,6 +6,7 @@ import { fontAwesomeIcons } from './shared/font-awesome-icons';
 
 
 
+
 @Component({
   imports: [RouterModule, FaIconComponent],
   selector: 'ecom-root',
