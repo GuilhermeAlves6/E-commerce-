@@ -8,7 +8,7 @@ import { fontAwesomeIcons } from './shared/font-awesome-icons';
 
 
 @Component({
-  imports: [RouterModule, FaIconComponent,],
+  imports: [RouterModule,FaIconComponent],
   selector: 'ecom-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
