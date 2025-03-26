@@ -1,15 +1,13 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA, inject, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { FaConfig, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { FaConfig,FaIconComponent,FaIconLibrary } from '@fortawesome/angular-fontawesome';
 import { fontAwesomeIcons } from './shared/font-awesome-icons';
-
-
-
-
+import { NavbarComponentComponent } from './layout/navbar/navbar.component';
+import { FooterComponentComponent } from './layout/footer/footer.component';
 
 
 @Component({
-  imports: [RouterModule],
+  imports: [RouterModule,FaIconComponent,NavbarComponentComponent,FooterComponentComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   selector: 'ecom-root',
   templateUrl: './app.component.html',
@@ -19,6 +17,7 @@ export class AppComponent implements OnInit {
 
   private faIconLibrary = inject(FaIconLibrary);
   private faConfig = inject(FaConfig);
+  
   ngOnInit(): void {
     this.initFontAwesome();  
   }
