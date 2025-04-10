@@ -11,15 +11,15 @@ spring:
     virtual:
       enabled: true
   datasource:
-    hikari:
-      poolName: Hikari
-      auto-commit: false
-    driver-class-name: org.postgresql.Driver
-    type: com.zaxxer.hikari.HikariDataSource
+     hikari:
+        poolName: Hikari
+        auto-commit: false
+     driver-class-name: org.postgresql.Driver
+     type: com.zaxxer.hikari.HikariDataSource
   data:
-    jpa:
-      repositories:
-        bootstrap-mode: deferred
+     jpa:
+       repositories:
+         bootstrap-mode: deferred
   jpa:
     properties:
       hibernate:
@@ -34,7 +34,7 @@ spring:
         connection:
           provider_disables_autocommit: true
         order_inserts: true
-        default_schema: ecommerce_yt
+        default_schema: ecommerce
     hibernate:
       ddl-auto: validate
       naming:
@@ -43,7 +43,7 @@ spring:
     open-in-view: false
   liquibase:
     change-log: classpath:db/changelog/master.xml
-    default-schema: ecommerce_yt
+    default-schema: ecommerce-yt
     contexts: dev
   #    drop-first: true
   security:
@@ -52,7 +52,7 @@ spring:
         jwt:
           issuer-uri: https://codecake.kinde.com
           jwk-set-uri: https://codecake.kinde.com/.well-known/jwks
-          audiences: http://localhost:8080/api
+          audiences: https://codecake.kinde.com/api
   devtools:
     restart:
       enabled: false
@@ -66,5 +66,4 @@ spring:
 
 server:
   port: 8080
-
 
